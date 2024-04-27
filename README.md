@@ -14,7 +14,7 @@
 - Make sure you have the VSC Cody extension installed (FREE account tier is supported!): https://sourcegraph.com/cody
 - Using even a small local language model will chew up RAM (and battery if you're on a laptop). I run an M1 with 64GB RAM, and Ollama does brilliantly. YMMV.
 
-- Cody uses the local LLM for code autocompletion AND chat. You can use VSC + Cody + Ollama as a completely free, completely airgapped chat and autocomplete solution. **No internet required.** Cody does all the things. And you can use many, many... *many* models. Not just codellama!
+- Cody uses the local LLM for code-completion AND chat. You can use VSC + Cody + Ollama as a completely free, completely airgapped chat and autocomplete solution. **No internet required.** Cody does all the things. And you can use many, many... *many* models. Not just codellama!
 
 ## Step 1: Get Ollama and the LLM
 ### You'll need ~5GB drive space for the application and LLM:
