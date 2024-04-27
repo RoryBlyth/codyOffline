@@ -10,7 +10,7 @@
 
 - If you're comfortable with Visual Studio Code (VSC), this should take you about ten minutes. Most of that is waiting for the LLM to download.
 
-### 🛑 Before you install...
+### 🛑 Before you proceed...
 - Make sure you have the VSC Cody extension installed.
 - Using even a small local language model will chew up RAM (and battery if you're on a laptop). I run an M1 with 64GB RAM, and Ollama does brilliantly. YMMV.
 
