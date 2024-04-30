@@ -24,7 +24,7 @@
 
 3. Paste: `ollama run codellama` (then press Enter)
 
-Wait a few minutes as Ollama downloads and mounts the LLM for you (it will save the model file for future use).
+Wait a few minutes as Ollama downloads and mounts the LLM for you (it will save the model file for future use). While waiting, you can move on to the next step (modifying your settings for local GPT).
 
 ## Step 2: Modify VSC's User Settings
 
@@ -56,7 +56,7 @@ Wait a few minutes as Ollama downloads and mounts the LLM for you (it will save 
   "cody.experimental.ollamaChat": true
 }
 ```
-**Now save the config file (Ctrl+S on Windows/Linux, Cmd+S on Mac), close its tab, and carry on!**
+**Now save the config file (Ctrl+S on Windows/Linux, Cmd+S on Mac), close its tab, and restart VSC**
 
 ## Step 3: Test!
 ### Optional: Disable WiFi (oh, no!)
