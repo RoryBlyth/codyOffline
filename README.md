@@ -1,10 +1,13 @@
-# Cody for Offline Visual Studio Code (VSC) Autocomplete: A 3-Step Quickstart (For FREE and PRO accounts)
+**UPDATE: 240505: Changed JSON snippet for config file to ensure autocomplete always uses Ollama**
+
+# Cody for OFFLINE Visual Studio Code (VSC) Chat AND Autocomplete: A 3-Step Quickstart (For FREE and PRO accounts)
 
 ## Read This First 👋 
 - I'm just a Cody fanboy. **I have NO affiliation with Sourcegraph**:
   -  https://twitter.com/rory_blyth/
   - https://mastodon.social/@rory_blyth
 - The linked article is missing a key configuration setting. Don't worry. It's in this guide.
+- **Sourcegraph has made it easier to use local CHAT without fiddling:** Cody's VSC extension (v1.16) will automatically add Ollama LLMs as options for chat, **but *autocomplete* will still require that you be online.** The new feature does *not* automagically wire-up local autocomplete. **If you want the 100% offline airgapped solution, continue reading this guide.** Details on Sourcegraph's new Ollama chat features here: https://sourcegraph.com/blog/cody-vscode-1-16-0-release
 
 - I created this streamlined step-by-step guide based on the full Sourcegraph post here: https://sourcegraph.com/blog/local-code-completion-with-ollama-and-cody. (THANK YOU, ADO! https://ado.xyz)
 
@@ -22,7 +25,7 @@
 
 2. Open terminal \(command line\)
 
-3. Paste: `ollama run codellama` (then press Enter)
+3. Paste: `ollama run llama3` (then press Enter)
 
 Wait a few minutes as Ollama downloads and mounts the LLM for you (it will save the model file for future use). While waiting, you can move on to the next step (modifying your settings for local GPT).
 
@@ -38,23 +41,22 @@ Wait a few minutes as Ollama downloads and mounts the LLM for you (it will save 
 
 ### Add this snippet to the end of the file (before the final closing curly brace "}"):
 ```
-"cody.autocomplete.advanced.provider": "experimental-ollama",
 "cody.autocomplete.experimental.ollamaOptions": {
   "url": "http://localhost:11434",
-  "model": "codellama"
+  "model": "llama3"
 },
-"cody.experimental.ollamaChat": true
+"cody.experimental.ollamaChat": true,
+"cody.autocomplete.advanced.provider": "experimental-ollama"
 ```
 **The bottom of your config file should look like this (note the leading comma!):**
 ```
   ,
-  "cody.autocomplete.advanced.provider": "experimental-ollama",
   "cody.autocomplete.experimental.ollamaOptions": {
     "url": "http://localhost:11434",
-    "model": "codellama"
+    "model": "llama3"
   },
-  "cody.experimental.ollamaChat": true
-}
+  "cody.experimental.ollamaChat": true,
+  "cody.autocomplete.advanced.provider": "experimental-ollama"
 ```
 **Now save the config file (Ctrl+S on Windows/Linux, Cmd+S on Mac), close its tab, and restart VSC**
 
@@ -80,5 +82,6 @@ Wait a few minutes as Ollama downloads and mounts the LLM for you (it will save 
 
 - Local GPT is fun. It'll get better. For now, tools like Cody Pro are probably the better option and will save you a *lot* of hassle.
 #
-### The Missing Piece
-If you have a problem (such as something not working because of a missing line from a blog post), head over here: https://community.sourcegraph.com/c/cody
+### Resources
+- If you have a problem (such as something not working because of a missing line from a blog post), head over here: https://community.sourcegraph.com/c/cody
+- 
