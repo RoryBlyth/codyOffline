@@ -84,4 +84,4 @@ Wait a few minutes as Ollama downloads and mounts the LLM for you (it will save 
 #
 ### Resources
 - If you have a problem (such as something not working because of a missing line from a blog post), head over here: https://community.sourcegraph.com/c/cody
-- 
+- Cody VSC v1.16 overview (featuring the new automagic Ollama chat feature): https://youtu.be/RJY1q1RACk0
